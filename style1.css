@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-padding-top: 20px;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+:root {
+  --main-color: #008148;
+  --second-color: #1e3932;
+}
+
+section {
+  padding: 10% 10%;
+}
+
+*::selection {
+  color: black;
+  background: var(--main-color);
+}
+
+body {
+  background: url(grey.jpg) repeat;
+  background-position: center;
+} 
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: linear-gradient(#906f70, #a59094);
+  box-shadow: 0 4px 41px rgb(14 55 54 / 14%);
+  padding: 5px 10%;
+  transition: 0.2s;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 120px;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  font-size: 1rem;
+  padding: 11px 20px;
+  color: var(--second-color);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.navbar a:hover {
+  color: var(--main-color);
+}
+
+.home {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-image: url(wa.jpg);
+  gap: 10px;
+  font-size: 40px;
+}
+
+.home-text {
+  padding: 12px;
+  flex: 1 1 17px;
+}
+
+.home-text span {
+  font-family: "Sofia", sans-serif;
+  font-size: 50px;
+}
+
+.home-text h1 {
+  letter-spacing: 2px;
+  font-size: 35px;
+}
+.home-img {
+  flex: 1 1 17px;
+}
+
+.home-img img {
+  width: 100%;
+  border-radius: 10%;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-11px, 0);
+  }
+  50% {
+    transform: translate(-0px, -11px);
+  }
+  100% {
+    transform: translate(-11px, 0);
+  }
+}
+
+.section {
+  background-color: #989fa7;
+}
+
+.section img {
+  float: left;
+  width:450px;
+  height:550px;
+  margin-bottom: 100px;
+  margin-right: 40px;
+  margin-left: 200px;
+  border-radius: 10px;
+  border: 10px solid transparent;
+  border-image: url("file:///c%3A/Users/User/Desktop/syahira%20website/img/doodle.jpg") 30 round;
+  border-radius: 10px;
+}
+
+.polaroid-gallery {
+  text-align: center;
+}
+
+.polaroid-gallery__title {
+  font-size: 32px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  margin: 48p;
+}
+
+.polaroid-card {
+  width: auto;
+  display: inline-block;
+  margin: 32px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.polaroid-card img {
+  object-fit: cover;
+}
+
+.polaroid-card figcaption {
+  font-size: 12px;
+  margin-top: 6px;
+  letter-spacing: 2px;
+}
+
+.polaroid-card:nth-of-type(even) {
+  transform: rotate(12deg);
+}
+
+.polaroid-card:nth-of-type(odd) {
+  transform: rotate(-12deg);
+}
+
+.polaroid-card:nth-of-type(even)::before {
+  content: '';
+  display: block;
+  background-color: rgba(222, 220, 200, 0.66);
+  width: 100px;
+  height: 25px;
+  transform: translate(-30px -25px) rotate(-20deg);
+}
+
+.polaroid-card:nth-of-type(odd)::before {
+  content: '';
+  display: block;
+  background-color: rgba(222, 220, 200, 0.86);
+  width: 100px;
+  height: 25px;
+  transform: translate(240px -5px) rotate(25deg);
+}
+
+.polaroid-card:hover {
+  transform: scale(1.25);
+}
+
